@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import Footer from "./common/components/Footer";
+import Nav from "./common/components/Nav";
+import Bored from "./features/Bored/Bored";
+import Cattos from "./features/Cattos/Cattos";
+import Doggos from "./features/Doggos/Doggos";
+import Joke from "./features/Jokes/Joke";
+import LandingPage from "./features/Landing/LandingPage";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <BrowserRouter>
+        <Nav />
+
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/joke" element={<Joke />} />
+          <Route path="/booored" element={<Bored />} />
+          <Route path="/doggos" element={<Doggos />} />
+          <Route path="/cattos" element={<Cattos />} />
+          <Route path="*" element={null} />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
