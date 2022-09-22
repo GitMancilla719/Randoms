@@ -26,7 +26,7 @@ export const getMemeTemplates = createAsyncThunk("Memer/getMemeTemplates", async
     if (error instanceof Error) {
       return thunkAPI.rejectWithValue(error.message);
     } else {
-      console.log("Unexpected error", error);
+      return { type: "Unexpected error", error };
     }
   }
 });

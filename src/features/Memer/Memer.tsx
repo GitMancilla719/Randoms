@@ -10,8 +10,6 @@ const Memer: FC = () => {
     memer.status === "idle" && dispatch(getMemeTemplates());
   }, [dispatch, memer]);
 
-  console.log(memer.value.data.memes);
-
   return (
     <div className=" text-center bg-gray-100 px-5 py-10">
       <div className="text-gray-600 py-5">
