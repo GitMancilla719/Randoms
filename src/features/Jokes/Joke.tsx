@@ -11,10 +11,11 @@ enum btnMsgs {
 }
 
 enum loadingMsg {
-  a = "Let me think of another one,",
+  a = "Let me see,",
   b = "Hmmmmmm,",
   c = "Here's one for ya!",
   d = "I'm running out of jokes, lol",
+  e = "Let me think of another one,",
 }
 
 const Joke: FC = () => {
@@ -26,7 +27,7 @@ const Joke: FC = () => {
 
   useEffect(() => {
     joke.status === "idle" && dispatch(getRandomJokes());
-  }, [dispatch, btnMsg, loadingMsgs]);
+  }, [dispatch, btnMsg, loadingMsgs, joke]);
 
   const getRandomJoke = (btnMsgs: any, loadingMsgs: any): void => {
     const values = Object.keys(btnMsgs);

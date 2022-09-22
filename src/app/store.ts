@@ -4,6 +4,7 @@ import { BoredSlice } from "../features/Bored/BoredSlice";
 import { CattoSlice } from "../features/Cattos/CattoSlice";
 import { DoggoSlice } from "../features/Doggos/DoggoSlice";
 import { JokeSlice } from "../features/Jokes/JokesSlice";
+import { MemerSlice } from "../features/Memer/MemerSlice";
 
 const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ const store = configureStore({
     BoredSlice: BoredSlice.reducer,
     DoggoSlice: DoggoSlice.reducer,
     CattoSlice: CattoSlice.reducer,
+    MemerSlice: MemerSlice.reducer,
   },
 });
 
