@@ -25,7 +25,7 @@ const App: FC = () => {
           <Route path="*" element={null} />
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );

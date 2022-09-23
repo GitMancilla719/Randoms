@@ -26,14 +26,14 @@ const api_links = [
 
 const Footer: FC = () => {
   return (
-    <div className="flex items-center justify-between bg-gray-900 text-white h-[200px] p-5 px-20">
-      <div className="w-[250px] text-gray-400">
+    <div className="flex md:flex-row xxs:flex-col text-center items-center justify-between bg-gray-900 text-white h-full p-5 px-20">
+      <div className="w-[250px] text-gray-400 xxs:my-5">
         <p>
           All data/information in this site are sourced from free public APIs and are rate limited.
         </p>
       </div>
 
-      <div className="text-center">
+      <div className="text-center xxs:my-5">
         <NavLink
           to="/"
           className=" font-black text-2xl border-2 border-gray-600 rounded-md py-1 px-2 w-fit"
@@ -44,7 +44,7 @@ const Footer: FC = () => {
         <p className="">For Portfolio use only</p>
       </div>
 
-      <div className="flex flex-col text-gray-400">
+      <div className="flex flex-col text-gray-400 xxs:my-5">
         {api_links.map((inf) => (
           <a href={inf.url} rel="noreferrer" target="_blank" key={inf.title}>
             {inf.title}
